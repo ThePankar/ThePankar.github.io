@@ -183,6 +183,26 @@
     color: var(--brand); }
   .country-d { display: block; font-size: .84rem; color: var(--muted);
     margin: .18rem 0 0; line-height: 1.45; }
+
+  /* ---- vitrine : texte + téléphone ---- */
+  img { max-width: 100%; }
+  .showcase { display: grid; gap: 1.8rem; align-items: center;
+    margin: .5rem 0 1rem; }
+  .showcase h1 { margin-top: 0; }
+  .showcase-note { margin: .9rem 0 0; font-size: .85rem; color: var(--muted); }
+  .phone-wrap { display: flex; justify-content: center; }
+  .phone { width: 100%; max-width: 16.5rem; padding: .5rem;
+    background: linear-gradient(160deg, #2b3343 0%, #161b24 100%);
+    border-radius: 2.35rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,.18), 0 30px 55px -22px rgba(25,32,43,.55); }
+  .phone img { display: block; width: 100%; height: auto;
+    border-radius: 1.95rem; }
+  .duo { display: grid; gap: 1.8rem; align-items: center; margin-top: 1.2rem; }
+  @media (min-width: 47rem) {
+    .showcase { grid-template-columns: 1.05fr .95fr; gap: 2.6rem; }
+    .duo { grid-template-columns: .95fr 1.05fr; gap: 2.6rem; }
+    .duo .phone-wrap { order: -1; }
+  }
 </style>
 </head>
 <body>
@@ -197,44 +217,24 @@
 <span class="brand-name"><a href="/">G-conges</a></span>
 </div>
 
-<h1>Suis tes congés payés et tes RTT, sans surprise</h1>
-<p class="lede">Combien il t'en reste, quand les poser, et comment en tirer le
-maximum. Une application Android qui fonctionne hors connexion — tes données
-restent sur ton téléphone.</p>
-
-<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil">Télécharger sur Google Play</a></p>
-
-<div class="hero" style="margin-top:2rem">
-  <p class="hero-label">CP restant · 2027</p>
-  <p class="hero-big">20<span class="hero-unit">/ 25 jours</span></p>
-  <p class="hero-sub">Solde de congés payés disponible.</p>
-  <div class="hero-bar"><span style="width:80%"></span></div>
-  <p class="hero-foot">5 jours déjà posés cette année</p>
-</div>
-
-<div class="tiles">
-  <div class="tile">
-    <p class="tile-cap"><span class="dot dot-warn"></span>RTT</p>
-    <p class="tile-n">9,0<span class="tile-tot"> / 9</span></p>
-    <p class="tile-note">8 si tout est validé</p>
+<div class="showcase">
+  <div>
+    <h1>Suis tes congés payés et tes RTT, sans surprise</h1>
+    <p class="lede">Combien il t'en reste, quand les poser, et comment en tirer
+    le maximum. Tout fonctionne hors connexion : tes données restent sur ton
+    téléphone.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil">Télécharger sur Google Play</a></p>
+    <p class="showcase-note">Android · gratuit · sans inscription</p>
   </div>
-  <div class="tile">
-    <p class="tile-cap"><span class="dot dot-good"></span>Ton rythme</p>
-    <p class="tile-n">+9,6</p>
-    <p class="tile-note">en avance ✓</p>
-  </div>
-  <div class="tile">
-    <p class="tile-cap"><span class="dot"></span>Prochain pont</p>
-    <p class="tile-n">×4</p>
-    <p class="tile-note">Ascension · 1 jour à poser</p>
-  </div>
-  <div class="tile">
-    <p class="tile-cap"><span class="dot dot-ink"></span>Mes compteurs</p>
-    <p class="tile-n">3</p>
-    <p class="tile-note">CET, récup, ancienneté</p>
+  <div class="phone-wrap">
+    <div class="phone">
+      <img src="/img/app-accueil.webp" width="540" height="1080"
+           alt="Écran d'accueil de G-conges : solde de congés payés restant sur
+           l'année, compteur de RTT, et calendrier du mois avec les congés posés."
+           decoding="async">
+    </div>
   </div>
 </div>
-<p class="preview-cap">Un aperçu de l'écran d'accueil de l'application.</p>
 
 <h2>Ce que fait l'application</h2>
 <div class="feats">
@@ -281,6 +281,28 @@ restent sur ton téléphone.</p>
   relier ton compte Google pour sauvegarder tes données sur ton propre Drive et
   retrouver tes congés dans Google Agenda. C'est facultatif : sans compte
   Google, l'application reste entièrement locale.</p>
+</div>
+
+<h2>Trouve tes meilleurs ponts en un geste</h2>
+<div class="duo">
+  <div class="phone-wrap">
+    <div class="phone">
+      <img src="/img/app-ponts.webp" width="540" height="1056" loading="lazy"
+           alt="Écran d'optimisation de G-conges : liste des ponts classés par
+           rendement, avec le nombre de jours à poser et de jours de repos
+           obtenus." decoding="async">
+    </div>
+  </div>
+  <div>
+    <p>L'application balaie le calendrier et repère les enchaînements les plus
+    rentables : un jour posé accolé à un férié peut valoir quatre jours de
+    repos.</p>
+    <p>Le calcul tient compte de <strong>ton</strong> solde réel, des congés
+    déjà posés et des jours fériés de ta région — pas d'un calendrier
+    générique.</p>
+    <p>Tu peux aussi demander l'inverse : « j'ai 5 jours à poser, où les mettre
+    pour obtenir la plus longue coupure ? »</p>
+  </div>
 </div>
 
 <h2>Le calendrier des ponts, en libre accès</h2>
