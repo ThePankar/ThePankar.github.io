@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>G-conges — suivi des congés payés et RTT</title>
+<meta name="description" content="G-conges : application Android pour suivre ses congés payés et RTT. Soldes à jour, calendrier, meilleurs ponts. Fonctionne hors connexion.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f5f2ec;
+    --ink: #19202b;
+    --muted: #646c7b;
+    --brand: #4f46e5;
+    --surface: #ffffff;
+    --line: rgba(25, 32, 43, .12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --ink: #e7e9ee;
+      --muted: #98a1b2;
+      --brand: #8ea2ff;
+      --surface: #1c222c;
+      --line: rgba(231, 233, 238, .14);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: 3rem 1.2rem 4rem;
+    font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+  }
+  header { margin-bottom: 2.5rem; }
+  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .4rem; }
+  .tagline { color: var(--muted); font-size: 1.05rem; margin: 0; }
+  h2 { margin-top: 2.5rem; font-size: 1.15rem; }
+  ul { padding-left: 1.1rem; }
+  li { margin: .4rem 0; }
+  a { color: var(--brand); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
+    margin-top: 1.2rem;
+  }
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .9rem;
+  }
+  footer a { color: var(--brand); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>G-conges</h1>
+  <p class="tagline">Suivre ses congés payés et ses RTT, en un coup d'œil.</p>
+</header>
+
+<p>G-conges est une application mobile Android qui aide chaque salarié à suivre
+ses propres congés : combien il en reste, quand les poser, et comment en tirer
+le meilleur parti.</p>
+
+<h2>Ce que fait l'application</h2>
+<ul>
+  <li><strong>Tes soldes</strong> de congés payés et de RTT, toujours à jour.</li>
+  <li>Un <strong>calendrier clair</strong> : congés, jours fériés, week-ends.</li>
+  <li>Les <strong>meilleurs ponts</strong> pour profiter au maximum de tes jours.</li>
+  <li>Chaque congé marqué <strong>« validé »</strong> ou <strong>« en attente »</strong>,
+      avec un solde réel et un solde prévisionnel.</li>
+  <li>Un <strong>rappel</strong> avant la date limite de report.</li>
+  <li>Fonctionne <strong>sans connexion</strong> : tes données restent sur ton téléphone.</li>
+</ul>
+
+<div class="card">
+  <p style="margin:0"><strong>Sauvegarde et agenda, en option.</strong> Tu peux
+  relier ton compte Google pour sauvegarder tes données sur ton propre Drive et
+  retrouver tes congés dans Google Agenda. C'est facultatif : sans compte
+  Google, l'application reste entièrement locale.</p>
+</div>
+
+<h2>Disponibilité</h2>
+<p>Application Android, disponible en français, anglais, allemand, néerlandais
+et suédois, avec les règles de congés propres à chaque pays.</p>
+
+<h2>Contact</h2>
+<p>Une question, un bug, une suggestion :
+<a href="mailto:thepankarapp@gmail.com">thepankarapp@gmail.com</a></p>
+
+<footer>
+  <p>
+    <a href="https://thepankar.github.io/Gestion-conges/">Politique de confidentialité</a> ·
+    <a href="https://github.com/ThePankar/Gestion-conges">Code source</a>
+  </p>
+  <p>Développé par Stéphane Leyendecker.</p>
+</footer>
+
+</body>
+</html>
