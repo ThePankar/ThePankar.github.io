@@ -158,6 +158,31 @@
     .hero-big { font-size: 2.9rem; }
     .hero { padding: 1.25rem 1.25rem 1.4rem; border-radius: 19px; }
   }
+
+  /* ---- accueil : accroche, fonctions, pays ---- */
+  .lede { font-size: 1.12rem; color: var(--muted); margin: 0 0 1.5rem;
+    max-width: 34rem; }
+  .preview-cap { margin: .7rem 0 0; font-size: .8rem; color: var(--muted);
+    text-align: center; }
+  .feats { display: grid; gap: .85rem; margin-top: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+  .feat { background: var(--surface); border: 1px solid var(--line);
+    border-radius: 17px; padding: 1.05rem 1.15rem; box-shadow: var(--shadow); }
+  .feat-ico { font-size: 1.35rem; line-height: 1; }
+  .feat h3 { margin: .55rem 0 .25rem; font-size: .98rem; }
+  .feat p { margin: 0; font-size: .89rem; color: var(--muted); line-height: 1.5; }
+  .countries { display: grid; gap: .7rem; margin-top: 1.1rem;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); }
+  .country { display: flex; gap: .75rem; align-items: flex-start;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 15px; padding: .85rem 1rem; text-decoration: none;
+    color: inherit; box-shadow: var(--shadow); }
+  .country:hover { border-color: var(--brand); }
+  .country-flag { font-size: 1.3rem; line-height: 1.2; flex: none; }
+  .country-t { display: block; font-weight: 700; font-size: .95rem;
+    color: var(--brand); }
+  .country-d { display: block; font-size: .84rem; color: var(--muted);
+    margin: .18rem 0 0; line-height: 1.45; }
 </style>
 </head>
 <body>
@@ -172,27 +197,84 @@
 <span class="brand-name"><a href="/">G-conges</a></span>
 </div>
 
-<header>
-  <h1>G-conges</h1>
-  <p class="tagline">Suivre ses congés payés et ses RTT, en un coup d'œil.</p>
-</header>
-
-<p>G-conges est une application mobile Android qui aide chaque salarié à suivre
-ses propres congés : combien il en reste, quand les poser, et comment en tirer
-le meilleur parti.</p>
+<h1>Suis tes congés payés et tes RTT, sans surprise</h1>
+<p class="lede">Combien il t'en reste, quand les poser, et comment en tirer le
+maximum. Une application Android qui fonctionne hors connexion — tes données
+restent sur ton téléphone.</p>
 
 <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil">Télécharger sur Google Play</a></p>
 
+<div class="hero" style="margin-top:2rem">
+  <p class="hero-label">CP restant · 2027</p>
+  <p class="hero-big">20<span class="hero-unit">/ 25 jours</span></p>
+  <p class="hero-sub">Solde de congés payés disponible.</p>
+  <div class="hero-bar"><span style="width:80%"></span></div>
+  <p class="hero-foot">5 jours déjà posés cette année</p>
+</div>
+
+<div class="tiles">
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-warn"></span>RTT</p>
+    <p class="tile-n">9,0<span class="tile-tot"> / 9</span></p>
+    <p class="tile-note">8 si tout est validé</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-good"></span>Ton rythme</p>
+    <p class="tile-n">+9,6</p>
+    <p class="tile-note">en avance ✓</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot"></span>Prochain pont</p>
+    <p class="tile-n">×4</p>
+    <p class="tile-note">Ascension · 1 jour à poser</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-ink"></span>Mes compteurs</p>
+    <p class="tile-n">3</p>
+    <p class="tile-note">CET, récup, ancienneté</p>
+  </div>
+</div>
+<p class="preview-cap">Un aperçu de l'écran d'accueil de l'application.</p>
+
 <h2>Ce que fait l'application</h2>
-<ul>
-  <li><strong>Tes soldes</strong> de congés payés et de RTT, toujours à jour.</li>
-  <li>Un <strong>calendrier clair</strong> : congés, jours fériés, week-ends.</li>
-  <li>Les <strong>meilleurs ponts</strong> pour profiter au maximum de tes jours.</li>
-  <li>Chaque congé marqué <strong>« validé »</strong> ou <strong>« en attente »</strong>,
-      avec un solde réel et un solde prévisionnel.</li>
-  <li>Un <strong>rappel</strong> avant la date limite de report.</li>
-  <li>Fonctionne <strong>sans connexion</strong> : tes données restent sur ton téléphone.</li>
-</ul>
+<div class="feats">
+  <div class="feat">
+    <div class="feat-ico">📊</div>
+    <h3>Tes soldes, toujours justes</h3>
+    <p>Congés payés et RTT, avec les règles de ton statut : temps partiel,
+    forfait jours, date d'entrée, période de référence.</p>
+  </div>
+  <div class="feat">
+    <div class="feat-ico">🏖️</div>
+    <h3>Les meilleurs ponts</h3>
+    <p>L'application cherche les enchaînements les plus rentables selon
+    <em>ton</em> solde réel, et les classe par rendement.</p>
+  </div>
+  <div class="feat">
+    <div class="feat-ico">✅</div>
+    <h3>Validé ou en attente</h3>
+    <p>Deux soldes distincts : ce qui est réellement décompté, et ce qu'il
+    restera si ta hiérarchie valide tout.</p>
+  </div>
+  <div class="feat">
+    <div class="feat-ico">⏳</div>
+    <h3>Ne perds plus un jour</h3>
+    <p>Un rappel avant la date limite de report, réglable selon les usages de
+    ton entreprise.</p>
+  </div>
+  <div class="feat">
+    <div class="feat-ico">🗓️</div>
+    <h3>Un calendrier lisible</h3>
+    <p>Tes congés, les jours fériés — nationaux ou régionaux — et les
+    week-ends, en vue mois ou année.</p>
+  </div>
+  <div class="feat">
+    <div class="feat-ico">🔒</div>
+    <h3>Hors connexion, sans compte</h3>
+    <p>Aucune inscription, aucun serveur. Tout vit sur ton téléphone, et rien
+    n'en sort sans que tu le demandes.</p>
+  </div>
+</div>
 
 <div class="card">
   <p style="margin:0"><strong>Sauvegarde et agenda, en option.</strong> Tu peux
@@ -201,27 +283,47 @@ le meilleur parti.</p>
   Google, l'application reste entièrement locale.</p>
 </div>
 
-<h2>Le calendrier des ponts</h2>
-<p>Chaque année, G-conges repère les meilleurs enchaînements de congés. Le
-calendrier public est consultable librement :</p>
-<ul>
-  <li>🇫🇷 <a href="/ponts-2027/"><strong>Ponts 2027</strong></a> — 6 jours de congés
-      posés pour 18 jours de repos, et les 4 week-ends de 3 jours offerts.</li>
-  <li>🇩🇪 <a href="/brueckentage-2027/"><strong>Brückentage 2027</strong></a> —
-      les 16 Bundesländer comparés : 19 jours libres en Bavière, 4 à Hambourg.</li>
-  <li>🇳🇱 <a href="/brugdagen-2027/"><strong>Brugdagen 2027</strong></a> —
-      2 jours posés pour 8 jours libres.</li>
-  <li>🇸🇪 <a href="/klamdagar-2027/"><strong>Klämdagar 2027</strong></a> —
-      5 jours posés pour 16 jours libres.</li>
-</ul>
+<h2>Le calendrier des ponts, en libre accès</h2>
+<p>Chaque année, l'application repère les meilleurs enchaînements. Les
+calendriers publics sont consultables sans rien installer :</p>
+
+<div class="countries">
+  <a class="country" href="/ponts-2027/">
+    <span class="country-flag">🇫🇷</span>
+    <span><span class="country-t">Ponts 2027</span>
+    <span class="country-d">6 jours posés pour 18 jours de repos, et 4 week-ends
+    de 3 jours offerts.</span></span>
+  </a>
+  <a class="country" href="/brueckentage-2027/">
+    <span class="country-flag">🇩🇪</span>
+    <span><span class="country-t">Brückentage 2027</span>
+    <span class="country-d">Les 16 Bundesländer comparés : 19 jours libres en
+    Bavière, 4 à Hambourg.</span></span>
+  </a>
+  <a class="country" href="/brugdagen-2027/">
+    <span class="country-flag">🇳🇱</span>
+    <span><span class="country-t">Brugdagen 2027</span>
+    <span class="country-d">2 jours posés pour 8 jours libres, tous au
+    printemps.</span></span>
+  </a>
+  <a class="country" href="/klamdagar-2027/">
+    <span class="country-flag">🇸🇪</span>
+    <span><span class="country-t">Klämdagar 2027</span>
+    <span class="country-d">5 jours posés pour 16 jours libres, dont onze en
+    janvier.</span></span>
+  </a>
+</div>
 
 <h2>Disponibilité</h2>
-<p>Application Android, disponible en français, anglais, allemand, néerlandais
-et suédois, avec les règles de congés propres à chaque pays.</p>
+<p>Application Android, disponible en <strong>français, anglais, allemand,
+néerlandais et suédois</strong>, avec les règles de congés propres à chaque
+pays : France, Royaume-Uni, Allemagne, Pays-Bas, Suède, Suisse et États-Unis.</p>
 
-<h2>Contact</h2>
-<p>Une question, un bug, une suggestion :
+<h2>Une question ?</h2>
+<p>Bug, suggestion, ou simple question :
 <a href="mailto:thepankarapp@gmail.com">thepankarapp@gmail.com</a></p>
+
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil-bas">Télécharger sur Google Play</a></p>
 
 <footer>
   <p>
