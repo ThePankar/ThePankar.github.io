@@ -7,6 +7,7 @@
 <title>Klämdagar 2027: planera semestern smart</title>
 <meta name="description" content="Klämdagar 2027: med 5 semesterdagar får du 16 lediga dagar. Alla röda dagar 2027, trettondedagsledigheten i januari och Kristi himmelsfärd.">
 <link rel="canonical" href="https://thepankar.github.io/klamdagar-2027/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23ffffff55' stroke-width='6'/%3E%3Cpath d='M32 12A20 20 0 0 1 52 32' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 32A20 20 0 0 1 46.1 46.1' fill='none' stroke='%23f0a028' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
 <meta name="author" content="Stéphane Leyendecker">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
@@ -21,48 +22,149 @@
 <meta name="twitter:description" content="5 semesterdagar, 16 lediga dagar. Hela översikten för 2027.">
 
 <style>
+  /* Design system G-conges — fond crème, indigo « Souffle », accent orange.
+     Tout est inline : aucune police ni image externe (page légère = bon SEO). */
   :root {
     color-scheme: light dark;
-    --bg: #f5f2ec; --ink: #19202b; --muted: #646c7b; --brand: #4f46e5;
-    --surface: #fff; --line: rgba(25,32,43,.12);
-    --good: #0f7b4f; --warn: #b45309;
+    --bg: #f5f2ec;
+    --surface: #ffffff;
+    --ink: #19202b;
+    --muted: #646c7b;
+    --brand: #4f46e5;
+    --brand-2: #6d5ef0;
+    --brand-tint: rgba(79, 70, 229, .09);
+    --hero-1: #4f46e5;
+    --hero-2: #6d5ef0;
+    --accent: #e08a1e;
+    --good: #10893e;
+    --line: rgba(25, 32, 43, .11);
+    --shadow: 0 1px 2px rgba(25,32,43,.05), 0 8px 24px -12px rgba(25,32,43,.18);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #14181f; --ink: #e7e9ee; --muted: #98a1b2; --brand: #8ea2ff;
-      --surface: #1c222c; --line: rgba(231,233,238,.14);
-      --good: #4ade80; --warn: #fbbf24;
+      --bg: #14181f;
+      --surface: #1c222c;
+      --ink: #e7e9ee;
+      --muted: #98a1b2;
+      --brand: #8ea2ff;
+      --brand-2: #7c8cf8;
+      --brand-tint: rgba(142, 162, 255, .12);
+      --hero-1: #3f35b5;
+      --hero-2: #5546cf;
+      --accent: #fbbf24;
+      --good: #4ade80;
+      --line: rgba(231, 233, 238, .13);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
     }
   }
   * { box-sizing: border-box; }
-  body { max-width: 48rem; margin: 0 auto; padding: 2rem 1.2rem 4rem;
+  body {
+    max-width: 50rem; margin: 0 auto; padding: 2.2rem 1.15rem 4rem;
     font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink); background: var(--bg); }
-  h1 { font-size: 2rem; line-height: 1.15; margin: 0 0 .5rem; }
-  h2 { margin-top: 2.6rem; font-size: 1.3rem; line-height: 1.25; }
-  h3 { margin-top: 1.6rem; font-size: 1.05rem; }
-  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 1.8rem; }
-  a { color: var(--brand); }
-  .cle { background: rgba(79,70,229,.1); border-left: 3px solid var(--brand);
-    padding: 1rem 1.2rem; border-radius: 6px; margin: 1.4rem 0; }
-  .cle p { margin: .4rem 0; }
-  .wrap { overflow-x: auto; margin-top: 1rem; }
-  table { border-collapse: collapse; width: 100%; font-size: .95rem; min-width: 30rem; }
-  th, td { text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--line); }
-  th { font-weight: 600; background: rgba(127,127,127,.07); }
+    color: var(--ink); background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---- en-tête de marque ---- */
+  .brand { display: flex; align-items: center; gap: .6rem; margin-bottom: 2rem; }
+  .brand svg { flex: none; border-radius: 11px; }
+  .brand-name { font-weight: 800; font-size: 1.05rem; letter-spacing: -.01em; }
+  .brand a { color: inherit; text-decoration: none; }
+
+  /* ---- titres ---- */
+  h1 { font-size: 2.15rem; line-height: 1.12; margin: 0 0 .45rem;
+       letter-spacing: -.022em; font-weight: 800; }
+  h2 { margin-top: 2.8rem; font-size: 1.32rem; line-height: 1.25;
+       letter-spacing: -.014em; font-weight: 750; }
+  h3 { margin-top: 1.7rem; font-size: 1.04rem; font-weight: 700; }
+  .meta { color: var(--muted); font-size: .875rem; margin: 0 0 1.7rem; }
+  a { color: var(--brand); text-underline-offset: 2px; }
+
+  /* ---- carte héros (reprend la carte de solde de l'app) ---- */
+  .hero {
+    background: linear-gradient(135deg, var(--hero-1) 0%, var(--hero-2) 100%);
+    color: #fff; border-radius: 22px; padding: 1.5rem 1.6rem 1.6rem;
+    margin: 1.6rem 0 1.1rem; box-shadow: var(--shadow);
+  }
+  .hero-label { margin: 0 0 .7rem; font-size: .78rem; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase; opacity: .82; }
+  .hero-big { margin: 0; font-size: 3.6rem; line-height: .95; font-weight: 800;
+    letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+  .hero-unit { font-size: 1.15rem; font-weight: 650; letter-spacing: -.01em;
+    opacity: .9; margin-left: .45rem; }
+  .hero-sub { margin: .85rem 0 0; font-size: 1rem; opacity: .95; }
+  .hero-sub strong { font-weight: 750; }
+  .hero-bar { margin-top: 1.15rem; height: 7px; border-radius: 99px;
+    background: rgba(255,255,255,.28); overflow: hidden; }
+  .hero-bar span { display: block; height: 100%; border-radius: 99px;
+    background: #fff; }
+  .hero-foot { margin: .6rem 0 0; font-size: .82rem; opacity: .82; }
+
+  /* ---- tuiles de statistiques (reprend les cartes RTT / rythme) ---- */
+  .tiles { display: grid; gap: .8rem; margin: 1.1rem 0 .4rem;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); }
+  .tile { background: var(--surface); border: 1px solid var(--line);
+    border-radius: 17px; padding: .95rem 1.05rem; box-shadow: var(--shadow); }
+  .tile-cap { margin: 0; font-size: .8rem; color: var(--muted);
+    font-weight: 600; display: flex; align-items: flex-start; gap: .42rem;
+    min-height: 2.4em; line-height: 1.2; }
+  .tile-cap .dot { margin-top: .38em; }
+  .dot { width: .5rem; height: .5rem; border-radius: 99px; flex: none;
+    background: var(--brand); }
+  .dot-good { background: var(--good); }
+  .dot-warn { background: var(--accent); }
+  .dot-ink  { background: var(--ink); }
+  .tile-n { margin: .35rem 0 0; font-size: 1.85rem; font-weight: 800;
+    line-height: 1.05; letter-spacing: -.03em;
+    font-variant-numeric: tabular-nums; }
+  .tile-tot { font-size: 1rem; font-weight: 650; color: var(--muted); }
+  .tile-note { margin: .1rem 0 0; font-size: .8rem; color: var(--muted); }
+
+  /* ---- sommaire ---- */
+  .toc { font-size: .92rem; background: var(--brand-tint); border-radius: 14px;
+    padding: .8rem 1rem; margin: 1.6rem 0 0; }
+  .toc strong { display: block; margin-bottom: .2rem; font-size: .8rem;
+    text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+
+  /* ---- tableaux ---- */
+  .wrap { overflow-x: auto; margin-top: 1.05rem; border: 1px solid var(--line);
+    border-radius: 17px; background: var(--surface); box-shadow: var(--shadow); }
+  table { border-collapse: collapse; width: 100%; font-size: .93rem;
+    min-width: 30rem; }
+  th, td { text-align: left; padding: .68rem .85rem;
+    border-bottom: 1px solid var(--line); }
+  thead th { font-weight: 700; font-size: .78rem; text-transform: uppercase;
+    letter-spacing: .05em; color: var(--muted); background: var(--brand-tint);
+    white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
   td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
-  .gain { color: var(--good); font-weight: 600; }
-  .perdu { color: var(--warn); }
+  .gain { color: var(--good); font-weight: 700; }
+  .perdu { color: var(--accent); font-weight: 650; }
+
+  /* ---- encart d'appel à l'action ---- */
   .cta { background: var(--surface); border: 1px solid var(--line);
-    border-radius: 12px; padding: 1.2rem 1.4rem; margin: 2rem 0; }
-  ul { padding-left: 1.15rem; }
-  li { margin: .35rem 0; }
-  footer { margin-top: 3.5rem; padding-top: 1.2rem; border-top: 1px solid var(--line);
-    color: var(--muted); font-size: .9rem; }
+    border-radius: 20px; padding: 1.4rem 1.5rem; margin: 2.4rem 0;
+    box-shadow: var(--shadow); }
+  .cta h2 { margin-top: 0; font-size: 1.18rem; }
+  .card { background: var(--surface); border: 1px solid var(--line);
+    border-radius: 17px; padding: 1.05rem 1.2rem; margin-top: 1.2rem;
+    box-shadow: var(--shadow); }
   .btn { display: inline-block; background: var(--brand); color: #fff;
-    text-decoration: none; font-weight: 600; padding: .7rem 1.2rem;
-    border-radius: 10px; margin-top: .3rem; }
-  .btn:hover { filter: brightness(1.08); }
+    text-decoration: none; font-weight: 700; padding: .78rem 1.35rem;
+    border-radius: 99px; margin-top: .45rem;
+    box-shadow: 0 6px 18px -8px var(--brand); }
+  .btn:hover { filter: brightness(1.07); }
+
+  ul { padding-left: 1.15rem; }
+  li { margin: .38rem 0; }
+  footer { margin-top: 3.6rem; padding-top: 1.3rem;
+    border-top: 1px solid var(--line); color: var(--muted); font-size: .875rem; }
+
+  @media (max-width: 30rem) {
+    h1 { font-size: 1.8rem; }
+    .hero-big { font-size: 2.9rem; }
+    .hero { padding: 1.25rem 1.25rem 1.4rem; border-radius: 19px; }
+  }
 </style>
 
 <script type="application/ld+json">
@@ -134,15 +236,48 @@
 </head>
 <body>
 
+<div class="brand">
+<a href="/" aria-label="ÄR-ledig — startsida"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="ÄR-ledig — startsida">
+<rect width="64" height="64" rx="14" fill="#4f46e5"/>
+<circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff55" stroke-width="6"/>
+<path d="M32 12A20 20 0 0 1 52 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
+<path d="M52 32A20 20 0 0 1 46.1 46.1" fill="none" stroke="#f0a028" stroke-width="6" stroke-linecap="round"/>
+</svg></a>
+<span class="brand-name"><a href="/">ÄR-ledig</a></span>
+</div>
+
 <h1>Klämdagar 2027</h1>
 <p class="meta">Uppdaterad 19 augusti 2026 · Automatiskt beräknad från helgdagskalendern</p>
 
-<div class="cle">
-  <p><strong>Det viktigaste om 2027:</strong></p>
-  <p>🟢 <strong>Stark januari</strong>: trettondedag jul på en onsdag ger två klämdagstillfällen.</p>
-  <p>🟢 <strong>5 semesterdagar ger 16 lediga dagar</strong> om du tar alla klämdagar.</p>
-  <p>🟠 <strong>8 av 16 helgdagar</strong> faller på en helg — ovanligt många.</p>
-  <p>🔴 <strong>Första maj, Nationaldagen och Juldagen</strong> faller alla på en helg.</p>
+<div class="hero">
+  <p class="hero-label">Sammanfattning 2027 · Sverige</p>
+  <p class="hero-big">16<span class="hero-unit">lediga dagar</span></p>
+  <p class="hero-sub">för <strong>5 semesterdagar</strong> om du tar alla klämdagar — januari står för elva av dem.</p>
+  <div class="hero-bar"><span style="width:31%"></span></div>
+  <p class="hero-foot">5 semesterdagar för 16 lediga dagar</p>
+</div>
+
+<div class="tiles">
+  <div class="tile">
+    <p class="tile-cap"><span class="dot"></span>Klämdagstillfällen</p>
+    <p class="tile-n">3</p>
+    <p class="tile-note">två i januari</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-good"></span>Påsken gratis</p>
+    <p class="tile-n">4</p>
+    <p class="tile-note">lediga dagar, 0 semester</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-warn"></span>Faller på helg</p>
+    <p class="tile-n">8<span class="tile-tot"> / 16</span></p>
+    <p class="tile-note">helgdagar och aftnar</p>
+  </div>
+  <div class="tile">
+    <p class="tile-cap"><span class="dot dot-ink"></span>Bästa avkastning</p>
+    <p class="tile-n">×4</p>
+    <p class="tile-note">Kristi himmelsfärdsdag</p>
+  </div>
 </div>
 
 <h2>De 3 klämdagstillfällena 2027</h2>
