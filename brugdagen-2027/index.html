@@ -8,7 +8,7 @@
 <meta name="description" content="Brugdagen 2027: met 2 vakantiedagen 8 dagen vrij. Alle feestdagen 2027 op een rij, plus de vrijdag na Hemelvaart en het lange paasweekend.">
 <link rel="canonical" href="https://thepankar.github.io/brugdagen-2027/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23ffffff55' stroke-width='6'/%3E%3Cpath d='M32 12A20 20 0 0 1 52 32' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 32A20 20 0 0 1 46.1 46.1' fill='none' stroke='%23f0a028' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
-<meta name="author" content="Stéphane Leyendecker">
+<meta name="author" content="ThePankarApp">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 
 <meta property="og:type" content="article">
@@ -41,7 +41,7 @@
     --shadow: 0 1px 2px rgba(25,32,43,.05), 0 8px 24px -12px rgba(25,32,43,.18);
   }
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
       --bg: #14181f;
       --surface: #1c222c;
       --ink: #e7e9ee;
@@ -56,6 +56,21 @@
       --line: rgba(231, 233, 238, .13);
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
     }
+  }
+  :root[data-theme="dark"] {
+      --bg: #14181f;
+      --surface: #1c222c;
+      --ink: #e7e9ee;
+      --muted: #98a1b2;
+      --brand: #8ea2ff;
+      --brand-2: #7c8cf8;
+      --brand-tint: rgba(142, 162, 255, .12);
+      --hero-1: #3f35b5;
+      --hero-2: #5546cf;
+      --accent: #fbbf24;
+      --good: #4ade80;
+      --line: rgba(231, 233, 238, .13);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
   }
   * { box-sizing: border-box; }
   body {
@@ -165,6 +180,35 @@
     .hero-big { font-size: 2.9rem; }
     .hero { padding: 1.25rem 1.25rem 1.4rem; border-radius: 19px; }
   }
+
+  /* ---- barre du haut : marque + commandes ---- */
+  .topbar { display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 2rem; }
+  .topbar .brand { margin-bottom: 0; }
+  .ctls { margin-left: auto; display: flex; align-items: center; gap: .4rem; }
+  .ctl { display: inline-flex; align-items: center; gap: .35rem;
+    font: inherit; font-size: .85rem; font-weight: 650; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 99px; padding: .42rem .8rem; cursor: pointer;
+    text-decoration: none; box-shadow: var(--shadow); }
+  .ctl:hover { border-color: var(--brand); }
+  .ico { font-size: 1rem; line-height: 1; }
+  .lang { position: relative; }
+  .lang > summary { list-style: none; }
+  .lang > summary::-webkit-details-marker { display: none; }
+  .lang-menu { position: absolute; right: 0; top: calc(100% + .35rem);
+    z-index: 20; min-width: 12.5rem; margin: 0; padding: .35rem;
+    list-style: none; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 18px 34px -14px rgba(25,32,43,.35); }
+  .lang-menu li { margin: 0; }
+  .lang-menu a { display: flex; justify-content: space-between; gap: .8rem;
+    padding: .48rem .7rem; border-radius: 9px; text-decoration: none;
+    color: var(--ink); font-size: .9rem; }
+  .lang-menu a:hover { background: var(--brand-tint); }
+  .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
+  .lang-menu .app { color: var(--muted); font-size: .82rem;
+    white-space: nowrap; }
 </style>
 
 <script type="application/ld+json">
@@ -176,7 +220,7 @@
   "inLanguage": "nl-NL",
   "datePublished": "2026-08-19",
   "dateModified": "2026-08-19",
-  "author": { "@type": "Person", "name": "Stéphane Leyendecker" },
+  "author": { "@type": "Organization", "name": "ThePankarApp" },
   "publisher": { "@type": "Organization", "name": "Heb-vrij" },
   "mainEntityOfPage": {
     "@type": "WebPage",
@@ -233,17 +277,57 @@
   ]
 }
 </script>
+<script>
+(function () {
+  var r = document.documentElement, K = 'gc-theme';
+  try { var v = localStorage.getItem(K); if (v) r.setAttribute('data-theme', v); } catch (e) {}
+  function actuel() {
+    return r.getAttribute('data-theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+  function peindre() {
+    // L'icône annonce le thème vers lequel on basculera.
+    var ico = actuel() === 'dark' ? '☀️' : '🌙';
+    document.querySelectorAll('[data-theme-btn] .ico').forEach(function (n) {
+      n.textContent = ico;
+    });
+  }
+  window.gcTheme = function () {
+    var n = actuel() === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', n);
+    try { localStorage.setItem(K, n); } catch (e) {}
+    peindre();
+  };
+  document.addEventListener('DOMContentLoaded', peindre);
+})();
+</script>
 </head>
 <body>
 
+<div class="topbar">
 <div class="brand">
-<a href="/" aria-label="Heb-vrij — home"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="Heb-vrij — home">
+<a href="/brugdagen-2027/" aria-label="Heb-vrij"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="Heb-vrij">
 <rect width="64" height="64" rx="14" fill="#4f46e5"/>
 <circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff55" stroke-width="6"/>
 <path d="M32 12A20 20 0 0 1 52 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
 <path d="M52 32A20 20 0 0 1 46.1 46.1" fill="none" stroke="#f0a028" stroke-width="6" stroke-linecap="round"/>
 </svg></a>
-<span class="brand-name"><a href="/">Heb-vrij</a></span>
+<span class="brand-name"><a href="/brugdagen-2027/">Heb-vrij</a></span>
+</div>
+  <div class="ctls">
+    <button class="ctl" type="button" data-theme-btn onclick="gcTheme()"
+            title="Thema wisselen" aria-label="Thema wisselen"><span class="ico">🌙</span></button>
+    <details class="lang">
+      <summary class="ctl" title="Taal wijzigen"><span class="ico">🌐</span>NL</summary>
+      <ul class="lang-menu">
+      <li><a href="/ponts-2027/">Français<span class="app">G-conges</span></a></li>
+      <li><a href="/en/">English<span class="app">Im-off</span></a></li>
+      <li><a href="/brueckentage-2027/">Deutsch<span class="app">Hab-Frei</span></a></li>
+      <li><a href="/brugdagen-2027/" aria-current="true">Nederlands<span class="app">Heb-vrij</span></a></li>
+      <li><a href="/klamdagar-2027/">Svenska<span class="app">ÄR-ledig</span></a></li>
+      </ul>
+    </details>
+  </div>
 </div>
 
 <h1>Brugdagen 2027</h1>

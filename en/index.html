@@ -1,19 +1,19 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>G-conges — suivi des congés payés et RTT</title>
-<meta name="description" content="G-conges : application Android pour suivre ses congés payés et RTT. Soldes à jour, calendrier, meilleurs ponts. Fonctionne hors connexion.">
-<link rel="canonical" href="https://thepankar.github.io/">
+<title>Im-off — track your paid leave and days off</title>
+<meta name="description" content="Im-off: Android app to track your paid leave and time off. Live balances, calendar, best bridge days. Works offline, no account needed.">
+<link rel="canonical" href="https://thepankar.github.io/en/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23ffffff55' stroke-width='6'/%3E%3Cpath d='M32 12A20 20 0 0 1 52 32' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 32A20 20 0 0 1 46.1 46.1' fill='none' stroke='%23f0a028' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
 <meta name="robots" content="index, follow">
 <meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="G-conges — suivi des congés payés et RTT">
-<meta property="og:description" content="Suivre ses congés payés et ses RTT en un coup d'œil. Soldes, calendrier, meilleurs ponts. Hors connexion.">
-<meta property="og:url" content="https://thepankar.github.io/">
-<meta property="og:site_name" content="G-conges">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Im-off — track your paid leave and days off">
+<meta property="og:description" content="Im-off: Android app to track your paid leave and time off. Live balances, calendar, best bridge days. Works offline, no account needed.">
+<meta property="og:url" content="https://thepankar.github.io/en/">
+<meta property="og:site_name" content="Im-off">
 <style>
   /* Design system G-conges — fond crème, indigo « Souffle », accent orange.
      Tout est inline : aucune police ni image externe (page légère = bon SEO). */
@@ -277,22 +277,22 @@
 
 <div class="topbar">
 <div class="brand">
-<a href="/" aria-label="G-conges"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="G-conges">
+<a href="/en/" aria-label="Im-off"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="Im-off">
 <rect width="64" height="64" rx="14" fill="#4f46e5"/>
 <circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff55" stroke-width="6"/>
 <path d="M32 12A20 20 0 0 1 52 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
 <path d="M52 32A20 20 0 0 1 46.1 46.1" fill="none" stroke="#f0a028" stroke-width="6" stroke-linecap="round"/>
 </svg></a>
-<span class="brand-name"><a href="/">G-conges</a></span>
+<span class="brand-name"><a href="/en/">Im-off</a></span>
 </div>
   <div class="ctls">
     <button class="ctl" type="button" data-theme-btn onclick="gcTheme()"
-            title="Changer de thème" aria-label="Changer de thème"><span class="ico">🌙</span></button>
+            title="Switch theme" aria-label="Switch theme"><span class="ico">🌙</span></button>
     <details class="lang">
-      <summary class="ctl" title="Changer de langue"><span class="ico">🌐</span>FR</summary>
+      <summary class="ctl" title="Change language"><span class="ico">🌐</span>EN</summary>
       <ul class="lang-menu">
-      <li><a href="/" aria-current="true">Français<span class="app">G-conges</span></a></li>
-      <li><a href="/en/">English<span class="app">Im-off</span></a></li>
+      <li><a href="/">Français<span class="app">G-conges</span></a></li>
+      <li><a href="/en/" aria-current="true">English<span class="app">Im-off</span></a></li>
       <li><a href="/de/">Deutsch<span class="app">Hab-Frei</span></a></li>
       <li><a href="/nl/">Nederlands<span class="app">Heb-vrij</span></a></li>
       <li><a href="/sv/">Svenska<span class="app">ÄR-ledig</span></a></li>
@@ -303,139 +303,108 @@
 
 <div class="showcase">
   <div>
-    <h1>Suis tes congés payés et tes RTT, sans surprise</h1>
-    <p class="lede">Combien il t'en reste, quand les poser, et comment en tirer
-    le maximum. Tout fonctionne hors connexion : tes données restent sur ton
-    téléphone.</p>
-    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil">Télécharger sur Google Play</a></p>
-    <p class="showcase-note">Android · gratuit · sans inscription</p>
+    <h1>Track your paid leave without the guesswork</h1>
+    <p class="lede">How much you have left, when to book it, and how to get the most out of it. Everything works offline — your data stays on your phone.</p>
+    <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil-en">Get it on Google Play</a></p>
+    <p class="showcase-note">Android · free · no sign-up</p>
   </div>
   <div class="phone-wrap">
     <div class="phone">
       <img src="/img/app-accueil.webp" width="540" height="1080"
-           alt="Écran d'accueil de G-conges : solde de congés payés restant sur
-           l'année, compteur de RTT, et calendrier du mois avec les congés posés."
-           decoding="async">
+           alt="Im-off home screen: remaining paid leave balance for the year, time-off counter and the month calendar." decoding="async">
     </div>
   </div>
 </div>
 
-<h2>Ce que fait l'application</h2>
+<h2>What the app does</h2>
 <div class="feats">
   <div class="feat">
     <div class="feat-ico">📊</div>
-    <h3>Tes soldes, toujours justes</h3>
-    <p>Congés payés et RTT, avec les règles de ton statut : temps partiel,
-    forfait jours, date d'entrée, période de référence.</p>
+    <h3>Balances you can trust</h3>
+    <p>Paid leave and time off, following your own situation: part-time, entry date, accrual period.</p>
   </div>
   <div class="feat">
     <div class="feat-ico">🏖️</div>
-    <h3>Les meilleurs ponts</h3>
-    <p>L'application cherche les enchaînements les plus rentables selon
-    <em>ton</em> solde réel, et les classe par rendement.</p>
+    <h3>The best bridge days</h3>
+    <p>The app looks for the most rewarding combinations based on *your* real balance, ranked by return.</p>
   </div>
   <div class="feat">
     <div class="feat-ico">✅</div>
-    <h3>Validé ou en attente</h3>
-    <p>Deux soldes distincts : ce qui est réellement décompté, et ce qu'il
-    restera si ta hiérarchie valide tout.</p>
+    <h3>Approved or pending</h3>
+    <p>Two separate balances: what is actually deducted, and what would be left if everything gets approved.</p>
   </div>
   <div class="feat">
     <div class="feat-ico">⏳</div>
-    <h3>Ne perds plus un jour</h3>
-    <p>Un rappel avant la date limite de report, réglable selon les usages de
-    ton entreprise.</p>
+    <h3>Never lose a day</h3>
+    <p>A reminder before your carry-over deadline, adjustable to your company's rules.</p>
   </div>
   <div class="feat">
     <div class="feat-ico">🗓️</div>
-    <h3>Un calendrier lisible</h3>
-    <p>Tes congés, les jours fériés — nationaux ou régionaux — et les
-    week-ends, en vue mois ou année.</p>
+    <h3>A calendar you can read</h3>
+    <p>Your leave, public holidays — national or regional — and weekends, by month or by year.</p>
   </div>
   <div class="feat">
     <div class="feat-ico">🔒</div>
-    <h3>Hors connexion, sans compte</h3>
-    <p>Aucune inscription, aucun serveur. Tout vit sur ton téléphone, et rien
-    n'en sort sans que tu le demandes.</p>
+    <h3>Offline, no account</h3>
+    <p>No sign-up, no server. Everything lives on your phone, and nothing leaves it unless you ask.</p>
   </div>
 </div>
 
 <div class="card">
-  <p style="margin:0"><strong>Sauvegarde et agenda, en option.</strong> Tu peux
-  relier ton compte Google pour sauvegarder tes données sur ton propre Drive et
-  retrouver tes congés dans Google Agenda. C'est facultatif : sans compte
-  Google, l'application reste entièrement locale.</p>
+  <p style="margin:0"><strong>Backup and calendar, optional.</strong> You can connect your Google account to back up to your own Drive and see your leave in Google Calendar. It is entirely optional: without a Google account the app stays fully local.</p>
 </div>
 
-<h2>Trouve tes meilleurs ponts en un geste</h2>
+<h2>Find your best bridge days in one tap</h2>
 <div class="duo">
   <div class="phone-wrap">
     <div class="phone">
       <img src="/img/app-ponts.webp" width="540" height="1056" loading="lazy"
-           alt="Écran d'optimisation de G-conges : liste des ponts classés par
-           rendement, avec le nombre de jours à poser et de jours de repos
-           obtenus." decoding="async">
+           alt="Im-off optimiser screen: bridge days ranked by return, showing days to book and days off gained." decoding="async">
     </div>
   </div>
   <div>
-    <p>L'application balaie le calendrier et repère les enchaînements les plus
-    rentables : un jour posé accolé à un férié peut valoir quatre jours de
-    repos.</p>
-    <p>Le calcul tient compte de <strong>ton</strong> solde réel, des congés
-    déjà posés et des jours fériés de ta région — pas d'un calendrier
-    générique.</p>
-    <p>Tu peux aussi demander l'inverse : « j'ai 5 jours à poser, où les mettre
-    pour obtenir la plus longue coupure ? »</p>
+    <p>The app scans the calendar and spots the most rewarding runs: one day booked next to a public holiday can be worth four days off.</p>
+    <p>The calculation uses <strong>your</strong> real balance, the leave you already booked and the holidays of your region — not a generic calendar.</p>
+    <p>You can also ask the reverse: "I have 5 days to book, where do they buy me the longest break?"</p>
   </div>
 </div>
 
-<h2>Le calendrier des ponts, en libre accès</h2>
-<p>Chaque année, l'application repère les meilleurs enchaînements. Les
-calendriers publics sont consultables sans rien installer :</p>
-
+<h2>Free bridge-day calendars</h2>
+<p>Every year the app works out the best runs. The public calendars need no install:</p>
 <div class="countries">
   <a class="country" href="/ponts-2027/">
     <span class="country-flag">🇫🇷</span>
     <span><span class="country-t">Ponts 2027</span>
-    <span class="country-d">6 jours posés pour 18 jours de repos, et 4 week-ends
-    de 3 jours offerts.</span></span>
+    <span class="country-d">France — 6 days off booked for 18 days of rest.</span></span>
   </a>
   <a class="country" href="/brueckentage-2027/">
     <span class="country-flag">🇩🇪</span>
     <span><span class="country-t">Brückentage 2027</span>
-    <span class="country-d">Les 16 Bundesländer comparés : 19 jours libres en
-    Bavière, 4 à Hambourg.</span></span>
+    <span class="country-d">Germany — all 16 states compared: 19 free days in Bavaria, 4 in Hamburg.</span></span>
   </a>
   <a class="country" href="/brugdagen-2027/">
     <span class="country-flag">🇳🇱</span>
     <span><span class="country-t">Brugdagen 2027</span>
-    <span class="country-d">2 jours posés pour 8 jours libres, tous au
-    printemps.</span></span>
+    <span class="country-d">Netherlands — 2 days booked for 8 days off.</span></span>
   </a>
   <a class="country" href="/klamdagar-2027/">
     <span class="country-flag">🇸🇪</span>
     <span><span class="country-t">Klämdagar 2027</span>
-    <span class="country-d">5 jours posés pour 16 jours libres, dont onze en
-    janvier.</span></span>
+    <span class="country-d">Sweden — 5 days booked for 16 days off.</span></span>
   </a>
 </div>
 
-<h2>Disponibilité</h2>
-<p>Application Android, disponible en <strong>français, anglais, allemand,
-néerlandais et suédois</strong>, avec les règles de congés propres à chaque
-pays : France, Royaume-Uni, Allemagne, Pays-Bas, Suède, Suisse et États-Unis.</p>
+<h2>Availability</h2>
+<p>Android app, available in <strong>English, French, German, Dutch and Swedish</strong>, with the leave rules of each country: France, United Kingdom, Germany, Netherlands, Sweden, Switzerland and the United States.</p>
 
-<h2>Une question ?</h2>
-<p>Bug, suggestion, ou simple question :
-<a href="mailto:thepankarapp@gmail.com">thepankarapp@gmail.com</a></p>
+<h2>Questions?</h2>
+<p>Bug, suggestion or simple question: <a href="mailto:thepankarapp@gmail.com">thepankarapp@gmail.com</a></p>
 
-<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil-bas">Télécharger sur Google Play</a></p>
+<p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Daccueil-en-bas">Get it on Google Play</a></p>
 
 <footer>
-  <p>
-    <a href="/confidentialite/">Politique de confidentialité</a> ·
-    <a href="mailto:thepankarapp@gmail.com">Contact</a>
-  </p>
+  <p><a href="/privacy/">Privacy policy</a> ·
+     <a href="mailto:thepankarapp@gmail.com">thepankarapp@gmail.com</a></p>
   <p>ThePankarApp</p>
 </footer>
 

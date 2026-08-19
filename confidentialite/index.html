@@ -4,6 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Politique de confidentialité — G-conges</title>
+<meta name="description" content="Politique de confidentialité de G-conges : tes données de congés restent sur ton téléphone. Aucun compte, aucun serveur de l'éditeur, aucun pistage.">
+<link rel="canonical" href="https://thepankar.github.io/confidentialite/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='32' r='20' fill='none' stroke='%23ffffff55' stroke-width='6'/%3E%3Cpath d='M32 12A20 20 0 0 1 52 32' fill='none' stroke='%23fff' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M52 32A20 20 0 0 1 46.1 46.1' fill='none' stroke='%23f0a028' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Politique de confidentialité — G-conges">
+<meta property="og:description" content="Politique de confidentialité de G-conges : tes données de congés restent sur ton téléphone. Aucun compte, aucun serveur de l'éditeur, aucun pistage.">
+<meta property="og:url" content="https://thepankar.github.io/confidentialite/">
 <style>
   /* Design system G-conges — fond crème, indigo « Souffle », accent orange.
      Tout est inline : aucune police ni image externe (page légère = bon SEO). */
@@ -24,7 +33,7 @@
     --shadow: 0 1px 2px rgba(25,32,43,.05), 0 8px 24px -12px rgba(25,32,43,.18);
   }
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
       --bg: #14181f;
       --surface: #1c222c;
       --ink: #e7e9ee;
@@ -39,6 +48,21 @@
       --line: rgba(231, 233, 238, .13);
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
     }
+  }
+  :root[data-theme="dark"] {
+      --bg: #14181f;
+      --surface: #1c222c;
+      --ink: #e7e9ee;
+      --muted: #98a1b2;
+      --brand: #8ea2ff;
+      --brand-2: #7c8cf8;
+      --brand-tint: rgba(142, 162, 255, .12);
+      --hero-1: #3f35b5;
+      --hero-2: #5546cf;
+      --accent: #fbbf24;
+      --good: #4ade80;
+      --line: rgba(231, 233, 238, .13);
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -12px rgba(0,0,0,.5);
   }
   * { box-sizing: border-box; }
   body {
@@ -189,21 +213,90 @@
   code { background: var(--brand-tint); padding: .12em .38em;
     border-radius: 5px; font-size: .9em; }
   @media (max-width: 34rem) { .sommaire ol { columns: 1; } }
+
+  /* ---- barre du haut : marque + commandes ---- */
+  .topbar { display: flex; align-items: center; gap: 1rem;
+    margin-bottom: 2rem; }
+  .topbar .brand { margin-bottom: 0; }
+  .ctls { margin-left: auto; display: flex; align-items: center; gap: .4rem; }
+  .ctl { display: inline-flex; align-items: center; gap: .35rem;
+    font: inherit; font-size: .85rem; font-weight: 650; color: var(--ink);
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 99px; padding: .42rem .8rem; cursor: pointer;
+    text-decoration: none; box-shadow: var(--shadow); }
+  .ctl:hover { border-color: var(--brand); }
+  .ico { font-size: 1rem; line-height: 1; }
+  .lang { position: relative; }
+  .lang > summary { list-style: none; }
+  .lang > summary::-webkit-details-marker { display: none; }
+  .lang-menu { position: absolute; right: 0; top: calc(100% + .35rem);
+    z-index: 20; min-width: 12.5rem; margin: 0; padding: .35rem;
+    list-style: none; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06), 0 18px 34px -14px rgba(25,32,43,.35); }
+  .lang-menu li { margin: 0; }
+  .lang-menu a { display: flex; justify-content: space-between; gap: .8rem;
+    padding: .48rem .7rem; border-radius: 9px; text-decoration: none;
+    color: var(--ink); font-size: .9rem; }
+  .lang-menu a:hover { background: var(--brand-tint); }
+  .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
+  .lang-menu .app { color: var(--muted); font-size: .82rem;
+    white-space: nowrap; }
 </style>
+<script>
+(function () {
+  var r = document.documentElement, K = 'gc-theme';
+  try { var v = localStorage.getItem(K); if (v) r.setAttribute('data-theme', v); } catch (e) {}
+  function actuel() {
+    return r.getAttribute('data-theme') ||
+      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  }
+  function peindre() {
+    // L'icône annonce le thème vers lequel on basculera.
+    var ico = actuel() === 'dark' ? '☀️' : '🌙';
+    document.querySelectorAll('[data-theme-btn] .ico').forEach(function (n) {
+      n.textContent = ico;
+    });
+  }
+  window.gcTheme = function () {
+    var n = actuel() === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', n);
+    try { localStorage.setItem(K, n); } catch (e) {}
+    peindre();
+  };
+  document.addEventListener('DOMContentLoaded', peindre);
+})();
+</script>
 </head>
 <body>
 
+<div class="topbar">
 <div class="brand">
-<a href="/" aria-label="G-conges — accueil"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="G-conges — accueil">
+<a href="/confidentialite/" aria-label="G-conges"><svg viewBox="0 0 64 64" width="36" height="36" role="img" aria-label="G-conges">
 <rect width="64" height="64" rx="14" fill="#4f46e5"/>
 <circle cx="32" cy="32" r="20" fill="none" stroke="#ffffff55" stroke-width="6"/>
 <path d="M32 12A20 20 0 0 1 52 32" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
 <path d="M52 32A20 20 0 0 1 46.1 46.1" fill="none" stroke="#f0a028" stroke-width="6" stroke-linecap="round"/>
 </svg></a>
-<span class="brand-name"><a href="/">G-conges</a></span>
+<span class="brand-name"><a href="/confidentialite/">G-conges</a></span>
+</div>
+  <div class="ctls">
+    <button class="ctl" type="button" data-theme-btn onclick="gcTheme()"
+            title="Changer de thème" aria-label="Changer de thème"><span class="ico">🌙</span></button>
+    <details class="lang">
+      <summary class="ctl" title="Changer de langue"><span class="ico">🌐</span>FR</summary>
+      <ul class="lang-menu">
+      <li><a href="/confidentialite/" aria-current="true">Français<span class="app">G-conges</span></a></li>
+      <li><a href="/privacy/">English<span class="app">Im-off</span></a></li>
+      <li><a href="/privacy/">Deutsch<span class="app">Hab-Frei</span></a></li>
+      <li><a href="/privacy/">Nederlands<span class="app">Heb-vrij</span></a></li>
+      <li><a href="/privacy/">Svenska<span class="app">ÄR-ledig</span></a></li>
+      </ul>
+    </details>
+  </div>
 </div>
 <h1>Politique de confidentialité — G-conges</h1>
-<p class="maj">Dernière mise à jour : 19 août 2026 · <a href="/privacy/">English version</a></p>
+<p class="maj">Dernière mise à jour : 19 août 2026</p>
 
 <p>G-conges (« l'application ») est une application mobile personnelle de suivi des
 congés payés et des jours de repos. Cette politique explique quelles données
@@ -237,7 +330,7 @@ celles que <strong>tu</strong> envoies volontairement vers ton propre compte Goo
 
 <h2 id="s1">1. Éditeur et responsable du traitement</h2>
 <ul>
-  <li>Éditeur : <strong>Stéphane Leyendecker</strong> (développeur indépendant), France</li>
+  <li>Éditeur : <strong>ThePankarApp</strong> — Stéphane Leyendecker, développeur indépendant, France</li>
   <li>Contact : <strong>thepankarapp@gmail.com</strong></li>
 </ul>
 <p>Cette politique couvre l'application quel que soit le pays depuis lequel tu
@@ -406,7 +499,7 @@ vers Google pour ce qui concerne la publicité ou ton compte Google.</p>
 <p>Cette politique peut évoluer ; la date en haut indique la dernière mise à jour.</p>
 
 <p class="maj" style="margin-top:2.5rem">
-<a href="/">Retour au site</a> · <a href="/privacy/">English version</a>
+<a href="/">Retour au site</a>
 </p>
 </body>
 </html>
