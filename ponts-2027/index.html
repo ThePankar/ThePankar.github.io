@@ -219,11 +219,18 @@
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
     .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 16px; padding: 1rem 1.2rem; margin: 2rem 0;
-      display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; align-items: center;
-      justify-content: space-between; }
-    .poche p { margin: 0; flex: 1 1 18rem; }
+      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
+      box-shadow: var(--shadow); }
+    .poche-app { display: flex; align-items: center; gap: .85rem;
+      flex-wrap: wrap; }
+    .poche-app img { border-radius: 14px; flex: 0 0 auto; }
+    .poche-id { flex: 1 1 11rem; display: flex; flex-direction: column;
+      gap: .12rem; }
+    .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
+      line-height: 1.2; }
+    .poche-meta { font-size: .82rem; color: var(--muted); }
     .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche p { margin: .95rem 0 0; font-size: .95rem; }
 </style>
 
 <script type="application/ld+json">
@@ -458,8 +465,15 @@ bloquer en priorité auprès de votre hiérarchie, car ce sont aussi celles que 
 le monde demandera.</p>
 
 <div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="Icône de l'application G-conges" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">G-conges</span>
+      <span class="poche-meta">Congés payés &amp; RTT · Android · Gratuit, avec achats intégrés</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dponts-2027">Installer</a>
+  </div>
   <p><strong>Cette page est figée sur 2027.</strong> L'application refait le calcul pour 2028, 2029 et les suivantes, à partir de <em>vos</em> compteurs de CP et de RTT — sans connexion, dans votre poche.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dponts-2027">Voir sur Google Play</a>
 </div>
 
 <h2 id="gratuits">Les 4 week-ends de 3 jours, sans poser un seul congé</h2>

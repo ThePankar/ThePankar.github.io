@@ -219,11 +219,18 @@
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
     .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 16px; padding: 1rem 1.2rem; margin: 2rem 0;
-      display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; align-items: center;
-      justify-content: space-between; }
-    .poche p { margin: 0; flex: 1 1 18rem; }
+      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
+      box-shadow: var(--shadow); }
+    .poche-app { display: flex; align-items: center; gap: .85rem;
+      flex-wrap: wrap; }
+    .poche-app img { border-radius: 14px; flex: 0 0 auto; }
+    .poche-id { flex: 1 1 11rem; display: flex; flex-direction: column;
+      gap: .12rem; }
+    .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
+      line-height: 1.2; }
+    .poche-meta { font-size: .82rem; color: var(--muted); }
     .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche p { margin: .95rem 0 0; font-size: .95rem; }
 </style>
 
 <script type="application/ld+json">
@@ -423,8 +430,15 @@ dag of een collectieve verlofdag. Ga dat na voordat je er een vakantiedag voor
 inlevert — misschien krijg je hem gratis.</p>
 
 <div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-pictogram van Heb-vrij" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Heb-vrij</span>
+      <span class="poche-meta">Vakantiedagen · Android · Gratis, met in-app-aankopen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Installeren</a>
+  </div>
   <p><strong>Deze pagina staat vast op 2027.</strong> De app rekent 2028, 2029 en de jaren daarna opnieuw uit, op basis van <em>jouw</em> saldo — offline, in je broekzak.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Bekijk op Google Play</a>
 </div>
 
 <h2>Het voorjaar van 2027: vier keer vrij in zeven weken</h2>

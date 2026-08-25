@@ -219,11 +219,18 @@
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
     .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 16px; padding: 1rem 1.2rem; margin: 2rem 0;
-      display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; align-items: center;
-      justify-content: space-between; }
-    .poche p { margin: 0; flex: 1 1 18rem; }
+      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
+      box-shadow: var(--shadow); }
+    .poche-app { display: flex; align-items: center; gap: .85rem;
+      flex-wrap: wrap; }
+    .poche-app img { border-radius: 14px; flex: 0 0 auto; }
+    .poche-id { flex: 1 1 11rem; display: flex; flex-direction: column;
+      gap: .12rem; }
+    .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
+      line-height: 1.2; }
+    .poche-meta { font-size: .82rem; color: var(--muted); }
     .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche p { margin: .95rem 0 0; font-size: .95rem; }
 </style>
 
 <script type="application/ld+json">
@@ -430,8 +437,15 @@ bundesweit — also in allen 16 Bundesländern — nur <strong>einen</strong>:</
 einzige Brückentag, den ganz Deutschland gleichzeitig im Blick hat.</p>
 
 <div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-Symbol von Hab-Frei" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Hab-Frei</span>
+      <span class="poche-meta">Urlaub &amp; Resturlaub · Android · Kostenlos, mit In-App-Käufen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Installieren</a>
+  </div>
   <p><strong>Diese Seite gilt nur für 2027.</strong> Die App berechnet 2028, 2029 und die Jahre danach neu — aus <em>Ihrem</em> Urlaubskonto und den Feiertagen Ihres Bundeslandes, offline, in Ihrer Tasche.</p>
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Bei Google Play ansehen</a>
 </div>
 
 <h2 id="laender">Brückentage 2027 in allen 16 Bundesländern</h2>
