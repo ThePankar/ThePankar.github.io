@@ -28,7 +28,7 @@
     --surface: #ffffff;
     --ink: #19202b;
     --muted: #646c7b;
-    --brand: #4f46e5;
+    --brand: #4f46e5; --on-brand: #fff;
     --brand-2: #6d5ef0;
     --brand-tint: rgba(79, 70, 229, .09);
     --hero-1: #4f46e5;
@@ -44,7 +44,7 @@
       --surface: #1c222c;
       --ink: #e7e9ee;
       --muted: #98a1b2;
-      --brand: #8ea2ff;
+      --brand: #8ea2ff; --on-brand: #10141c;
       --brand-2: #7c8cf8;
       --brand-tint: rgba(142, 162, 255, .12);
       --hero-1: #3f35b5;
@@ -60,7 +60,7 @@
       --surface: #1c222c;
       --ink: #e7e9ee;
       --muted: #98a1b2;
-      --brand: #8ea2ff;
+      --brand: #8ea2ff; --on-brand: #10141c;
       --brand-2: #7c8cf8;
       --brand-tint: rgba(142, 162, 255, .12);
       --hero-1: #3f35b5;
@@ -162,7 +162,7 @@
   .card { background: var(--surface); border: 1px solid var(--line);
     border-radius: 17px; padding: 1.05rem 1.2rem; margin-top: 1.2rem;
     box-shadow: var(--shadow); }
-  .btn { display: inline-block; background: var(--brand); color: #fff;
+  .btn { display: inline-block; background: var(--brand); color: var(--on-brand);
     text-decoration: none; font-weight: 700; padding: .78rem 1.35rem;
     border-radius: 99px; margin-top: .45rem;
     box-shadow: 0 6px 18px -8px var(--brand); }

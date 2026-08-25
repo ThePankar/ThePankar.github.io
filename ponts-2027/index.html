@@ -39,7 +39,7 @@
     --surface: #ffffff;
     --ink: #19202b;
     --muted: #646c7b;
-    --brand: #4f46e5;
+    --brand: #4f46e5; --on-brand: #fff;
     --brand-2: #6d5ef0;
     --brand-tint: rgba(79, 70, 229, .09);
     --hero-1: #4f46e5;
@@ -55,7 +55,7 @@
       --surface: #1c222c;
       --ink: #e7e9ee;
       --muted: #98a1b2;
-      --brand: #8ea2ff;
+      --brand: #8ea2ff; --on-brand: #10141c;
       --brand-2: #7c8cf8;
       --brand-tint: rgba(142, 162, 255, .12);
       --hero-1: #3f35b5;
@@ -71,7 +71,7 @@
       --surface: #1c222c;
       --ink: #e7e9ee;
       --muted: #98a1b2;
-      --brand: #8ea2ff;
+      --brand: #8ea2ff; --on-brand: #10141c;
       --brand-2: #7c8cf8;
       --brand-tint: rgba(142, 162, 255, .12);
       --hero-1: #3f35b5;
@@ -173,7 +173,7 @@
   .card { background: var(--surface); border: 1px solid var(--line);
     border-radius: 17px; padding: 1.05rem 1.2rem; margin-top: 1.2rem;
     box-shadow: var(--shadow); }
-  .btn { display: inline-block; background: var(--brand); color: #fff;
+  .btn { display: inline-block; background: var(--brand); color: var(--on-brand);
     text-decoration: none; font-weight: 700; padding: .78rem 1.35rem;
     border-radius: 99px; margin-top: .45rem;
     box-shadow: 0 6px 18px -8px var(--brand); }
@@ -218,6 +218,12 @@
   .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
+    .poche { background: var(--surface); border: 1px solid var(--line);
+      border-radius: 16px; padding: 1rem 1.2rem; margin: 2rem 0;
+      display: flex; flex-wrap: wrap; gap: .5rem 1.1rem; align-items: center;
+      justify-content: space-between; }
+    .poche p { margin: 0; flex: 1 1 18rem; }
+    .poche .btn { margin-top: 0; flex: 0 0 auto; }
 </style>
 
 <script type="application/ld+json">
@@ -348,7 +354,7 @@
 </div>
 
 <h1>Ponts 2027 : le calendrier des meilleurs ponts</h1>
-<p class="meta">Mis à jour le 19 août 2026 · Calculé automatiquement à partir du calendrier légal français</p>
+<p class="meta">Mis à jour le 19 août 2026 · Calculé par G-conges à partir du calendrier légal français</p>
 
 <div class="hero">
   <p class="hero-label">Le bilan de 2027 · France</p>
@@ -450,6 +456,11 @@ l'Armistice : dans les deux cas, un <em>seul</em> jour de congé posé le vendre
 transforme un jeudi férié en week-end de quatre jours. Ce sont les deux dates à
 bloquer en priorité auprès de votre hiérarchie, car ce sont aussi celles que tout
 le monde demandera.</p>
+
+<div class="poche">
+  <p><strong>Cette page est figée sur 2027.</strong> L'application refait le calcul pour 2028, 2029 et les suivantes, à partir de <em>vos</em> compteurs de CP et de RTT — sans connexion, dans votre poche.</p>
+  <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dponts-2027">Voir sur Google Play</a>
+</div>
 
 <h2 id="gratuits">Les 4 week-ends de 3 jours, sans poser un seul congé</h2>
 
