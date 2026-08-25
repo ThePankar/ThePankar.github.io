@@ -218,9 +218,10 @@
   .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
-    .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
-      box-shadow: var(--shadow); }
+    .poche, .cta { background: var(--brand-tint);
+      border: 2px solid var(--brand); border-radius: 18px;
+      padding: 1.05rem 1.15rem; margin: 2rem 0; box-shadow: var(--shadow); }
+    .cta { padding: 1.3rem 1.4rem; }
     .poche-app { display: flex; align-items: center; gap: .85rem;
       flex-wrap: wrap; }
     .poche-app img { border-radius: 14px; flex: 0 0 auto; }
@@ -229,8 +230,10 @@
     .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
       line-height: 1.2; }
     .poche-meta { font-size: .82rem; color: var(--muted); }
-    .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche .btn, .cta .btn { margin-top: 0; flex: 0 0 auto; }
     .poche p { margin: .95rem 0 0; font-size: .95rem; }
+    .cta h2 { margin: .95rem 0 .35rem; font-size: 1.18rem; }
+    .cta p { margin: .5rem 0 0; }
 </style>
 
 <script type="application/ld+json">
@@ -386,6 +389,18 @@
   </div>
 </div>
 
+<div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-pictogram van Heb-vrij" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Heb-vrij</span>
+      <span class="poche-meta">Vakantiedagen · Android · Gratis, met in-app-aankopen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Installeren</a>
+  </div>
+  <p><strong>Je brugdagen, elk jaar, in je broekzak.</strong> Heb-vrij berekent de beste data op basis van <em>jouw</em> saldo — 2027, 2028 en de jaren daarna. Offline, zonder account.</p>
+</div>
+
 <h2>De 2 brugdagen van 2027</h2>
 
 <p>Een brugdag is een vakantiedag die je tussen een feestdag en het weekend legt,
@@ -428,18 +443,6 @@ uitstekend.</p>
 <p>De <strong>vrijdag na Hemelvaart</strong> is in veel cao's al standaard een vrije
 dag of een collectieve verlofdag. Ga dat na voordat je er een vakantiedag voor
 inlevert — misschien krijg je hem gratis.</p>
-
-<div class="poche">
-  <div class="poche-app">
-    <img src="../img/icone.webp" alt="App-pictogram van Heb-vrij" width="56" height="56" loading="lazy">
-    <span class="poche-id">
-      <span class="poche-nom">Heb-vrij</span>
-      <span class="poche-meta">Vakantiedagen · Android · Gratis, met in-app-aankopen</span>
-    </span>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Installeren</a>
-  </div>
-  <p><strong>Deze pagina staat vast op 2027.</strong> De app rekent 2028, 2029 en de jaren daarna opnieuw uit, op basis van <em>jouw</em> saldo — offline, in je broekzak.</p>
-</div>
 
 <h2>Het voorjaar van 2027: vier keer vrij in zeven weken</h2>
 
@@ -509,13 +512,20 @@ levert negen vrije dagen op, van zaterdag 25 december tot en met zondag 2 januar
 — een rendement van slechts ×1,8, het laagste van het jaar.</p>
 
 <div class="cta">
+    <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-pictogram van Heb-vrij" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Heb-vrij</span>
+      <span class="poche-meta">Vakantiedagen · Android · Gratis, met in-app-aankopen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Installeren</a>
+  </div>
   <h2 style="font-size:1.15rem; margin-top:0">En met <em>jouw</em> saldo?</h2>
   <p>Deze kalender geldt voor iedereen. Wat voor jou slim is, hangt af van hoeveel
   vakantiedagen je nog hebt staan — en wanneer ze verlopen.</p>
   <p><strong>Heb-vrij</strong> berekent je brugdagen op basis van <em>jouw</em>
   saldo, houdt je vakantiedagen bij en waarschuwt je voordat dagen vervallen.
   Alles werkt offline en je gegevens blijven op je telefoon.</p>
-  <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrugdagen-2027">Heb-vrij downloaden via Google Play</a></p>
 </div>
 
 <h2>Veelgestelde vragen over brugdagen 2027</h2>

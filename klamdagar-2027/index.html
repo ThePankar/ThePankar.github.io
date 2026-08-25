@@ -218,9 +218,10 @@
   .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
-    .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
-      box-shadow: var(--shadow); }
+    .poche, .cta { background: var(--brand-tint);
+      border: 2px solid var(--brand); border-radius: 18px;
+      padding: 1.05rem 1.15rem; margin: 2rem 0; box-shadow: var(--shadow); }
+    .cta { padding: 1.3rem 1.4rem; }
     .poche-app { display: flex; align-items: center; gap: .85rem;
       flex-wrap: wrap; }
     .poche-app img { border-radius: 14px; flex: 0 0 auto; }
@@ -229,8 +230,10 @@
     .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
       line-height: 1.2; }
     .poche-meta { font-size: .82rem; color: var(--muted); }
-    .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche .btn, .cta .btn { margin-top: 0; flex: 0 0 auto; }
     .poche p { margin: .95rem 0 0; font-size: .95rem; }
+    .cta h2 { margin: .95rem 0 .35rem; font-size: 1.18rem; }
+    .cta p { margin: .5rem 0 0; }
 </style>
 
 <script type="application/ld+json">
@@ -386,6 +389,18 @@
   </div>
 </div>
 
+<div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="Appikon för ÄR-ledig" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">ÄR-ledig</span>
+      <span class="poche-meta">Semesterdagar · Android · Gratis, med köp i appen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dklamdagar-2027">Installera</a>
+  </div>
+  <p><strong>Dina klämdagar, år efter år, i fickan.</strong> ÄR-ledig räknar ut de bästa datumen utifrån <em>ditt</em> saldo — 2027, 2028 och åren därefter. Offline, utan konto.</p>
+</div>
+
 <h2>De 3 klämdagstillfällena 2027</h2>
 
 <p>En klämdag är en arbetsdag som ligger inklämd mellan en helgdag och en helg. Tar
@@ -442,18 +457,6 @@ januari</strong>: elva lediga dagar för fyra semesterdagar.</p>
 <p>Fredagen efter Kristi himmelsfärdsdag är årets bästa enskilda affär: <strong>en
 semesterdag ger fyra lediga</strong>. Det är också den dag flest kollegor kommer
 att ansöka om, så var tidig.</p>
-
-<div class="poche">
-  <div class="poche-app">
-    <img src="../img/icone.webp" alt="Appikon för ÄR-ledig" width="56" height="56" loading="lazy">
-    <span class="poche-id">
-      <span class="poche-nom">ÄR-ledig</span>
-      <span class="poche-meta">Semesterdagar · Android · Gratis, med köp i appen</span>
-    </span>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dklamdagar-2027">Installera</a>
-  </div>
-  <p><strong>Den här sidan är låst till 2027.</strong> Appen räknar om 2028, 2029 och åren därefter utifrån <em>ditt</em> saldo — offline, i fickan.</p>
-</div>
 
 <h2>Alla helgdagar och aftnar 2027</h2>
 
@@ -512,13 +515,20 @@ med en helg. Bara kollektivavtalet kan ge något bättre — kontrollera ditt.</
 fredag</strong>, vilket i praktiken ger två långa helger i rad.</p>
 
 <div class="cta">
+    <div class="poche-app">
+    <img src="../img/icone.webp" alt="Appikon för ÄR-ledig" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">ÄR-ledig</span>
+      <span class="poche-meta">Semesterdagar · Android · Gratis, med köp i appen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dklamdagar-2027">Installera</a>
+  </div>
   <h2 style="font-size:1.15rem; margin-top:0">Och med <em>ditt</em> saldo?</h2>
   <p>Den här kalendern är samma för alla. Vad som verkligen är smart beror på hur
   många semesterdagar du har kvar — och när de förfaller.</p>
   <p><strong>ÄR-ledig</strong> räknar ut klämdagarna utifrån <em>ditt</em> saldo,
   håller reda på dina semesterdagar och varnar dig innan dagar går förlorade. Allt
   fungerar offline och dina uppgifter stannar i telefonen.</p>
-  <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dklamdagar-2027">Hämta ÄR-ledig på Google Play</a></p>
 </div>
 
 <h2>Vanliga frågor om klämdagar 2027</h2>

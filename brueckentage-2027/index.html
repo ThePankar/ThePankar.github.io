@@ -218,9 +218,10 @@
   .lang-menu a[aria-current="true"] { font-weight: 700; color: var(--brand); }
   .lang-menu .app { color: var(--muted); font-size: .82rem;
     white-space: nowrap; }
-    .poche { background: var(--surface); border: 1px solid var(--line);
-      border-radius: 18px; padding: 1.05rem 1.15rem; margin: 2rem 0;
-      box-shadow: var(--shadow); }
+    .poche, .cta { background: var(--brand-tint);
+      border: 2px solid var(--brand); border-radius: 18px;
+      padding: 1.05rem 1.15rem; margin: 2rem 0; box-shadow: var(--shadow); }
+    .cta { padding: 1.3rem 1.4rem; }
     .poche-app { display: flex; align-items: center; gap: .85rem;
       flex-wrap: wrap; }
     .poche-app img { border-radius: 14px; flex: 0 0 auto; }
@@ -229,8 +230,10 @@
     .poche-nom { font-weight: 800; font-size: 1.08rem; color: var(--ink);
       line-height: 1.2; }
     .poche-meta { font-size: .82rem; color: var(--muted); }
-    .poche .btn { margin-top: 0; flex: 0 0 auto; }
+    .poche .btn, .cta .btn { margin-top: 0; flex: 0 0 auto; }
     .poche p { margin: .95rem 0 0; font-size: .95rem; }
+    .cta h2 { margin: .95rem 0 .35rem; font-size: 1.18rem; }
+    .cta p { margin: .5rem 0 0; }
 </style>
 
 <script type="application/ld+json">
@@ -402,6 +405,18 @@
 <a href="#weihnachten">Weihnachten</a> ·
 <a href="#faq">häufige Fragen</a></p>
 
+<div class="poche">
+  <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-Symbol von Hab-Frei" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Hab-Frei</span>
+      <span class="poche-meta">Urlaub &amp; Resturlaub · Android · Kostenlos, mit In-App-Käufen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Installieren</a>
+  </div>
+  <p><strong>Ihre Brückentage, Jahr für Jahr, in Ihrer Tasche.</strong> Hab-Frei berechnet die besten Termine aus <em>Ihrem</em> Urlaubskonto und den Feiertagen Ihres Bundeslandes — 2027, 2028 und die Jahre danach. Offline, ohne Konto.</p>
+</div>
+
 <h2 id="bundesweit">Der einzige bundesweite Brückentag 2027</h2>
 
 <p>Ein Brückentag ist ein Urlaubstag, der zwischen einem Feiertag und dem
@@ -435,18 +450,6 @@ bundesweit — also in allen 16 Bundesländern — nur <strong>einen</strong>:</
 
 <p>Das ist der Termin, den Sie <strong>früh</strong> beantragen sollten: es ist der
 einzige Brückentag, den ganz Deutschland gleichzeitig im Blick hat.</p>
-
-<div class="poche">
-  <div class="poche-app">
-    <img src="../img/icone.webp" alt="App-Symbol von Hab-Frei" width="56" height="56" loading="lazy">
-    <span class="poche-id">
-      <span class="poche-nom">Hab-Frei</span>
-      <span class="poche-meta">Urlaub &amp; Resturlaub · Android · Kostenlos, mit In-App-Käufen</span>
-    </span>
-    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Installieren</a>
-  </div>
-  <p><strong>Diese Seite gilt nur für 2027.</strong> Die App berechnet 2028, 2029 und die Jahre danach neu — aus <em>Ihrem</em> Urlaubskonto und den Feiertagen Ihres Bundeslandes, offline, in Ihrer Tasche.</p>
-</div>
 
 <h2 id="laender">Brückentage 2027 in allen 16 Bundesländern</h2>
 
@@ -616,6 +619,14 @@ einen Freitag</strong>, was in vielen Betrieben ohnehin ein halber oder ganzer
 freier Tag ist.</p>
 
 <div class="cta">
+    <div class="poche-app">
+    <img src="../img/icone.webp" alt="App-Symbol von Hab-Frei" width="56" height="56" loading="lazy">
+    <span class="poche-id">
+      <span class="poche-nom">Hab-Frei</span>
+      <span class="poche-meta">Urlaub &amp; Resturlaub · Android · Kostenlos, mit In-App-Käufen</span>
+    </span>
+    <a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Installieren</a>
+  </div>
   <h2 style="font-size:1.15rem; margin-top:0">Und mit <em>Ihrem</em> Urlaubskonto?</h2>
   <p>Dieser Kalender gilt für alle gleich. Was sich wirklich lohnt, hängt aber
   davon ab, was Ihnen noch zusteht — und in welchem Bundesland Sie arbeiten.</p>
@@ -623,7 +634,6 @@ freier Tag ist.</p>
   Urlaubskonto, kennt die Feiertage Ihres Bundeslandes und warnt Sie, bevor
   Resturlaub verfällt. Alles funktioniert offline, Ihre Daten bleiben auf dem
   Handy.</p>
-  <p><a class="btn" href="https://play.google.com/store/apps/details?id=com.thepankar.gconges&amp;referrer=utm_source%3Dthepankar.github.io%26utm_medium%3Dsite%26utm_campaign%3Dbrueckentage-2027">Hab-Frei bei Google Play laden</a></p>
 </div>
 
 <h2 id="faq">Häufige Fragen zu den Brückentagen 2027</h2>
