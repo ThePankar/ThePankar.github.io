@@ -1,0 +1,26 @@
+{
+  "id": "modele-2026-09",
+  "actif": false,
+  "messages": {
+    "fr": {
+      "titre": "Bonne rentrée !",
+      "texte": "Pense à poser tes ponts d'automne — l'optimiseur te montre les meilleures dates."
+    },
+    "en": {
+      "titre": "Welcome back!",
+      "texte": "Time to plan your autumn long weekends — the optimizer shows you the best dates."
+    },
+    "de": {
+      "titre": "Guten Start!",
+      "texte": "Denk an deine Brückentage im Herbst — der Optimierer zeigt dir die besten Termine."
+    },
+    "nl": {
+      "titre": "Goede terugkeer!",
+      "texte": "Plan je brugdagen in het najaar — de optimizer toont je de beste data."
+    },
+    "sv": {
+      "titre": "Välkommen tillbaka!",
+      "texte": "Dags att planera dina klämdagar i höst — optimeraren visar de bästa datumen."
+    }
+  }
+}
