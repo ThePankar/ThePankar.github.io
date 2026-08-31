@@ -1,26 +1,26 @@
 {
-  "id": "2026-08-nouveau",
+  "id": "2026-08-31-nouveau",
   "actif": true,
   "messages": {
     "fr": {
       "titre": "Bonne rentrée !",
-      "texte": "Pense à poser tes ponts d'automne — l'optimiseur te montre les meilleures dates."
+      "texte": "Pense à poser tes ponts d'automne — l'optimiseur te montre les meilleures dates. N'hésite pas à noter l'app et me proposer des améliorations"
     },
     "en": {
       "titre": "Welcome back!",
-      "texte": "Time to plan your autumn long weekends — the optimizer shows you the best dates."
+      "texte": "Time to plan your autumn long weekends — the optimizer shows you the best dates. Please do not hesitate to rate the application and suggest improvements to me."
     },
     "de": {
       "titre": "Guten Start!",
-      "texte": "Denk an deine Brückentage im Herbst — der Optimierer zeigt dir die besten Termine."
+      "texte": "Denk an deine Brückentage im Herbst — der Optimierer zeigt dir die besten Termine. Zögern Sie nicht, die Anwendung zu bewerten und mir Verbesserungsvorschläge zu unterbreiten."
     },
     "nl": {
       "titre": "Goede terugkeer!",
-      "texte": "Plan je brugdagen in het najaar — de optimizer toont je de beste data."
+      "texte": "Plan je brugdagen in het najaar — de optimizer toont je de beste data. Aarzel niet om de applicatie te beoordelen en mij verbeteringen voor te stellen."
     },
     "sv": {
       "titre": "Välkommen tillbaka!",
-      "texte": "Dags att planera dina klämdagar i höst — optimeraren visar de bästa datumen."
+      "texte": "Dags att planera dina klämdagar i höst — optimeraren visar de bästa datumen. Tveka inte att betygsätta applikationen och föreslå förbättringar till mig."
     }
   }
 }
